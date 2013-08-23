@@ -9,7 +9,8 @@ jQuery(document).ready(function() {
 	jQuery('.hero-download').addClass('animated fadeInUp');
 	jQuery('h1').addClass('animated fadeInDown');
 	jQuery('p.hero-text').addClass('animated fadeInLeft');
-	jQuery('.span5').addClass('animated fadeInUp');
+	jQuery('footer').delay(500).addClass('animated fadeInUp');
+    jQuery('.notes').addClass('animated fadeInLeft');
 	
 	//popup modal for video
 	jQuery('.popup-vimeo').magnificPopup({

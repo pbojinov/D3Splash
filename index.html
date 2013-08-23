@@ -1,157 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>Diablo 3 Server Status App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wondering whether you should play Diablo 3? This Android application shows you the server status in your region. Don't waste time, check the status first.">
-    <meta name="author" content="Petar Bojinov aka pbojinov">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="bootstrap-3.0.0/assets/ico/favicon.png">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/serverStatus.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
-	<link href="css/magnific-popup.css" rel="stylesheet" />
-	<link href="css/animate-custom.css" rel="stylesheet" />
+    <title>Diablo 3 Server Status</title>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.0.0/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet"/>
+    <link href="css/animate-custom.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="bootstrap-3.0.0/assets/js/html5shiv.js"></script>
+    <script src="bootstrap-3.0.0/assets/js/respond.min.js"></script>
     <![endif]-->
+</head>
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="favicon.ico">
-  </head>
+<body>
 
-  <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.html" onclick="_gaq.push(['_trackEvent', 'home text', 'clicked', 'index', 'nav'])">Diablo 3 Server Status</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="index.html" onclick="_gaq.push(['_trackEvent', 'home button', 'clicked', 'index', 'nav'])">Home</a></li>
-              <li><a href="https://play.google.com/store/apps/details?id=com.mastaphora.diabloserverstatus" onclick="_gaq.push(['_trackEvent', 'download button', 'clicked', 'index', 'nav'])">Download</a></li>
-              <li class="sm">
-                  <div class="social-media">
-                  <a href="https://twitter.com/share" onclick="_gaq.push(['_trackEvent', 'twitter share', 'clicked', 'index', 'nav'])" class="twitter-share-button" data-url="http://bit.ly/diablo3ss" data-text="Check out the Diablo 3 Server Status app on Google Play!" data-via="pbojinov" data-hashtags="d3ss" data-dnt="true">Tweet</a>
-                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                  </div>
-              </li><!--
-                <li class="sm">
-                    <div class="social-media">
-                        <div class="g-plusone" data-size="medium" data-annotation="bubble" data-expandTo="bottom"></div>
-                        <script type="text/javascript">
-                            window.___gcfg = {
-                                lang: 'en-US',
-                                parsetags: 'onload'
-                            };
-                            (function() {
-                                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                                po.src = 'https://apis.google.com/js/plusone.js';
-                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                            })();
-                        </script>
-                    </div>
-                </li>-->
-            </ul>
-          </div><!--/.nav-collapse -->
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Diablo 3 Server Status</a>
         </div>
-      </div>
-    </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="bootstrap-3.0.0/examples/navbar-static-top">Home</a></li>
 
+            <li><a href="https://play.google.com/store/apps/details?id=com.mastaphora.diabloserverstatus"
+                   onclick="_gaq.push(['_trackEvent', 'download button nav', 'clicked', 'releases'])">
+                Download</a></li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</div>
+
+<div id="wrap">
     <div class="container">
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-		<div class="info">
-	        <h1>Server status <br/> on the go.</h1>
-			<br/>
-	        <p class="hero-text">Diablo 3 Server Status is a simple utility </br> for checking the server status in your area.</p>
-	        <p class="hero-download"><a href="https://play.google.com/store/apps/details?id=com.mastaphora.diabloserverstatus" onclick="_gaq.push(['_trackEvent', 'download button', 'clicked', 'index'])" class="btn btn-primary btn-large">Download from Play Store &raquo;</a></p>
-		</div>
-		<div id="phone" class="hidden-phone">
-			<img src="img/app_default.png">
-		</div>
-		<!--
-		btn-primary
-		btn btn-danger
-		btn btn-warning
-		btn btn-succes
-		btn btn-info 
-		btn btn-inverse
-		-->
-      </div>
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-sm-7"><h1>Server status on the go.</h1>
 
-        <!--_trackEvent(category, action, opt_label, opt_value, opt_noninteraction)-->
-      <!-- Example row of columns -->
-      <div class="row">
-		<div class="span5">
-		  <h2>Quick Video Demo</h2>
-		   <p>Watch a video demo of the <br/> Dialbo 3 Server Status app in action.</p>		 
-            <p><a class="btn popup-vimeo" href="http://player.vimeo.com/video/54130175?badge=0&width=600" onclick="_gaq.push(['_trackEvent', 'play video', 'clicked', 'index'])">Play video &raquo;</a></p>
-			
-			
-		</div><!--end span5-->
-		<div class="span5">
-		  <h2>Donate</h2>
-		  <p>Help support future development  by <br/>donating securely through PayPal!</p>
-		  <p><a class="btn btn-success donate"
-                onclick="_gaq.push(['_trackEvent', 'donate button', 'clicked', 'index'])"
-                href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=petarb%40sbcglobal%2enet&lc=US&item_name=pbojinov&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted">
-              Donate now &raquo;
-            </a>
-          </p>
-	   </div>
-      </div>
+                    <div class="hero-download">
+                        <p>Diablo 3 Server Status is a simple utility
+                            for checking the server status in your area.</p>
 
+                        <p>
+                            <a href="https://play.google.com/store/apps/details?id=com.mastaphora.diabloserverstatus"
+                               onclick="_gaq.push(['_trackEvent', 'download button', 'clicked', 'index'])"
+                               class="btn btn-primary btn-lg offer">
+                                <span class="glyphicon glyphicon-download"></span> Download from Play Store</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div id="phone" class="hidden-xs">
+                        <img src="img/app_default.png">
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="row marketing hero-download">
 
+            <div class="col-xs-5">
+                <h2>Video Demo</h2>
+
+                <p>See the app in action. <br/>Get exclusive tips.<br/></p>
+
+                <p>
+                    <a class="btn btn-default popup-vimeo"
+                       href="http://player.vimeo.com/video/54130175?badge=0&width=600"
+                       onclick="_gaq.push(['_trackEvent', 'play video', 'clicked', 'index'])">
+                        <span class="glyphicon glyphicon-play"></span> Play video </a>
+                </p>
+            </div>
+            <!--end col5-->
+
+            <div class="col-xs-6">
+                <h2>Send Some Love</h2>
+
+                <p>Help support future development by <br/>donating securely through PayPal!</p>
+
+                <p><a class="btn btn-success donate"
+                      onclick="_gaq.push(['_trackEvent', 'donate button', 'clicked', 'index'])"
+                      href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=petarb%40sbcglobal%2enet&lc=US&item_name=pbojinov&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted">
+                    <span class="glyphicon glyphicon-heart"></span> Donate
+                </a>
+                </p>
+            </div>
+            <!--end col5-->
+        </div>
         <footer>
             <hr>
-            <p class="cpr"><img src="icon.png"> | <a href="http://about.me/petar" onclick="_gaq.push(['_trackEvent', 'about me', 'clicked', 'index', 'footer'])">pbojinov</a> &#169; 2012 </p>
-            <p class="twitter-follow">
-                <a href="https://twitter.com/pbojinov"
-                   onclick="_gaq.push(['_trackEvent', 'twitter follow', 'clicked', 'index', 'footer'])"
-                   class="twitter-follow-button"
-                   data-show-count="false"
-                   data-dnt="true">Follow @pbojinov</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </p>
-            <p class="cpr">- <a href="privacy.html" onclick="_gaq.push(['_trackEvent', 'privacy', 'clicked', 'index', 'footer'])">Privacy</a></p>
+            <ul class="footer-links">
+                <li>
+                    <a href="privacy.html"
+                       onclick="_gaq.push(['_trackEvent', 'privacy', 'clicked', 'index', 'footer'])">Privacy Policy</a>
+                </li>
+                <li class="muted">·</li>
+                <li><a href="releases.html">Releases</a></li>
+                <li class="muted">·</li>
+                <li class="social-media">
+                    <iframe src="http://ghbtns.com/github-btn.html?user=pbojinov&type=follow"
+                            allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+                </li>
+                <li class="social-media">
+                    <a href="https://twitter.com/pbojinov"
+                       onclick="_gaq.push(['_trackEvent', 'twitter follow', 'clicked', 'index', 'footer'])"
+                       class="twitter-follow-button"
+                       data-show-count="false"
+                       data-dnt="true">Follow @pbojinov</a>
+                </li>
+
+                <li class="social-media">
+                    <a href="https://twitter.com/share"
+                       onclick="_gaq.push(['_trackEvent', 'twitter share', 'clicked', 'index', 'nav'])"
+                       class="twitter-share-button" data-url="http://bit.ly/diablo3ss"
+                       data-text="Check out the Diablo 3 Server Status app on Google Play!" data-via="pbojinov"
+                       data-hashtags="d3ss" data-dnt="true">Tweet</a>
+                </li>
+            </ul>
+            <ul class="social-media">
+
+            </ul>
         </footer>
 
 
-    </div> <!-- /container -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /wrap -->
 
-<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36594124-1']);
-  _gaq.push(['_setDomainName', 'serverstatusapp.com']);
-  _gaq.push(['_setAllowLinker', true]);
-  _gaq.push(['_trackPageview']);
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, "script", "twitter-wjs");</script>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.7.2.min.js"></script>
-    <script src="js/bootstrap-min.js"></script>
-	<script src="js/tools.js"></script>
-
-  </body>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="bootstrap-3.0.0/assets/js/jquery.js"></script>
+<script src="bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+<script src="js/tools.js"></script>
+</body>
 </html>

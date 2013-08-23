@@ -1,0 +1,82 @@
+body {
+  padding-top: 70px;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+.container-narrow > hr {
+    margin: 20px 0;
+}
+
+/* Main marketing message and sign up button */
+.container .jumbotron {
+    padding-right: 30px;
+}
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 30px 20px 20px 20px;
+    margin-bottom: 10px;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 12px 22px;
+}
+
+.jumbotron h1 {
+    font-size: 50px;
+}
+
+.jumbotron p {
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    text-align: center;
+}
+
+/* general */
+h2 {
+    font-size: 23px;
+}
+
+.col-xs-7 {
+    xwidth: 58.333333333333336%;
+}
+
+
+/* Set the fixed height of the footer here */
+#footer {
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+ul.footer-links, ul.social-media {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.footer-links li, ul.social-media li {
+    display: inline;
+    padding: 5px;
+}
+
+li.social-media {
+    position: relative;
+    top: 5px;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+
+.container .credit {
+    margin: 20px 0;
+}
