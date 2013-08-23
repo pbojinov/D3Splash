@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="bootstrap-3.0.0/assets/ico/favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
 
     <title>Diablo 3 Server Status</title>
 
@@ -38,7 +38,7 @@
             <a class="navbar-brand" href="index.html">Diablo 3 Server Status</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
 
             <li><a href="https://play.google.com/store/apps/details?id=com.mastaphora.diabloserverstatus"
                    onclick="_gaq.push(['_trackEvent', 'download button nav', 'clicked', 'releases'])">
@@ -55,9 +55,9 @@
     ================================================== -->
         <section id="docs">
             <div class="page-header">
-                <h1>Releases</h1>
+                <h1 class="animated fadeInDown">Releases</h1>
             </div>
-            <div class="notes">
+            <div class="notes animated fadeInLeft">
                 <dl>
                     <dt>1.3</dt>
                     <ul>
@@ -101,15 +101,15 @@
         </section>
 
 
-        <footer>
+        <footer class="animated fadeInUp">
             <hr>
             <ul class="footer-links">
                 <li>
                     <a href="privacy.html"
-                       onclick="_gaq.push(['_trackEvent', 'privacy', 'clicked', 'index', 'footer'])">Privacy Policy</a>
+                       onclick="_gaq.push(['_trackEvent', 'privacy', 'clicked', 'releases', 'footer'])">Privacy Policy</a>
                 </li>
                 <li class="muted">·</li>
-                <li><a href="releases.html">Releases</a></li>
+                <li class="active"><a href="releases.html">Releases</a></li>
                 <li class="muted">·</li>
                 <li class="social-media">
                     <iframe src="http://ghbtns.com/github-btn.html?user=pbojinov&type=follow"
@@ -117,7 +117,7 @@
                 </li>
                 <li class="social-media">
                     <a href="https://twitter.com/pbojinov"
-                       onclick="_gaq.push(['_trackEvent', 'twitter follow', 'clicked', 'index', 'footer'])"
+                       onclick="_gaq.push(['_trackEvent', 'twitter follow', 'clicked', 'releases', 'footer'])"
                        class="twitter-follow-button"
                        data-show-count="false"
                        data-dnt="true">Follow @pbojinov</a>
@@ -125,7 +125,7 @@
 
                 <li class="social-media">
                     <a href="https://twitter.com/share"
-                       onclick="_gaq.push(['_trackEvent', 'twitter share', 'clicked', 'index', 'nav'])"
+                       onclick="_gaq.push(['_trackEvent', 'twitter share', 'clicked', 'releases', 'nav'])"
                        class="twitter-share-button" data-url="http://bit.ly/diablo3ss"
                        data-text="Check out the Diablo 3 Server Status app on Google Play!" data-via="pbojinov"
                        data-hashtags="d3ss" data-dnt="true">Tweet</a>
@@ -143,15 +143,30 @@
 <!-- /wrap -->
 
 
-<script>!function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }
-}(document, "script", "twitter-wjs");</script>
+<script type="text/javascript">
+    !function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, "script", "twitter-wjs");
+
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36594124-1']);
+    _gaq.push(['_setDomainName', 'serverstatusapp.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

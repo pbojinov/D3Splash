@@ -46,10 +46,9 @@ h2 {
     font-size: 23px;
 }
 
-.col-xs-7 {
-    xwidth: 58.333333333333336%;
+.active {
+    font-weight: bold;
 }
-
 
 /* Set the fixed height of the footer here */
 #footer {

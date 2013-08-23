@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="bootstrap-3.0.0/assets/ico/favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
 
     <title>Diablo 3 Server Status</title>
 
@@ -54,9 +54,9 @@
         <!-- Main component for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="row">
-                <div class="col-sm-7"><h1>Server status on the go.</h1>
+                <div class="col-sm-7"><h1 class="animated fadeInDown">Server status on the go.</h1>
 
-                    <div class="hero-download">
+                    <div class="hero-download animated fadeInLeft">
                         <p>Diablo 3 Server Status is a simple utility
                             for checking the server status in your area.</p>
 
@@ -76,14 +76,14 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <div id="phone" class="hidden-xs">
+                    <div id="phone" class="hidden-xs animated fadeInRight">
                         <img src="img/app_default.png">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row marketing hero-download">
+        <div class="row marketing hero-download animated fadeInUp">
 
             <div class="col-xs-5">
                 <h2>Video Demo</h2>
@@ -113,7 +113,7 @@
             </div>
             <!--end col5-->
         </div>
-        <footer>
+        <footer class="animated fadeInUp">
             <hr>
             <ul class="footer-links">
                 <li>
@@ -155,7 +155,8 @@
 <!-- /wrap -->
 
 
-<script>!function (d, s, id) {
+<script type="text/javascript">
+!function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (!d.getElementById(id)) {
         js = d.createElement(s);
@@ -163,7 +164,21 @@
         js.src = "//platform.twitter.com/widgets.js";
         fjs.parentNode.insertBefore(js, fjs);
     }
-}(document, "script", "twitter-wjs");</script>
+}(document, "script", "twitter-wjs");
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36594124-1']);
+  _gaq.push(['_setDomainName', 'serverstatusapp.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
