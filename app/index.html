@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
 
     <title>Diablo 3 Server Status</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap-3.0.0/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/navbar-fixed-top.css" rel="stylesheet">
@@ -19,8 +19,8 @@
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="bootstrap-3.0.0/assets/js/html5shiv.js"></script>
-    <script src="bootstrap-3.0.0/assets/js/respond.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -37,16 +37,18 @@
             </button>
             <a class="navbar-brand" href="index.html">Diablo 3 Server Status</a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="bootstrap-3.0.0/examples/navbar-static-top">Home</a></li>
-
-            <li><a href="https://play.google.com/store/apps/details?id=com.mastaphora.diabloserverstatus"
-                   onclick="_gaq.push(['_trackEvent', 'download button nav', 'clicked', 'releases'])">
-                Download</a></li>
-        </ul>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.mastaphora.diabloserverstatus"
+                       onclick="_gaq.push(['_trackEvent', 'download button nav', 'clicked', 'releases'])">
+                    Download</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
     </div>
-    <!--/.nav-collapse -->
 </div>
+
 
 <div id="wrap">
     <div class="container">
@@ -61,17 +63,17 @@
                             for checking the server status in your area.</p>
 
                         <p>
-                        <!-- should ab test this -->
-<!--                             <a href="https://play.google.com/store/apps/details?id=com.mastaphora.diabloserverstatus"
-                               onclick="_gaq.push(['_trackEvent', 'download button', 'clicked', 'index'])"
-                               class="btn btn-primary btn-lg offer">
-                            Free Download on Play Store <span class="glyphicon glyphicon-download"></span> </a> -->
+                            <!-- should ab test this -->
+                            <!--                             <a href="https://play.google.com/store/apps/details?id=com.mastaphora.diabloserverstatus"
+                                                           onclick="_gaq.push(['_trackEvent', 'download button', 'clicked', 'index'])"
+                                                           class="btn btn-primary btn-lg offer">
+                                                        Free Download on Play Store <span class="glyphicon glyphicon-download"></span> </a> -->
 
                             <a href="https://play.google.com/store/apps/details?id=com.mastaphora.diabloserverstatus">
-  <img alt="Android app on Google Play"
-  onclick="_gaq.push(['_trackEvent', 'download button', 'clicked', 'index'])"
-       src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
+                                <img alt="Android app on Google Play"
+                                     onclick="_gaq.push(['_trackEvent', 'download button', 'clicked', 'index'])"
+                                     src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png"/>
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -107,7 +109,7 @@
                 <p><a class="btn btn-success donate"
                       onclick="_gaq.push(['_trackEvent', 'donate button', 'clicked', 'index'])"
                       href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=petarb%40sbcglobal%2enet&lc=US&item_name=pbojinov&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted">
-                    Donate <span class="glyphicon glyphicon-heart"></span> 
+                    Donate <span class="glyphicon glyphicon-heart"></span>
                 </a>
                 </p>
             </div>
@@ -156,35 +158,38 @@
 
 
 <script type="text/javascript">
-!function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }
-}(document, "script", "twitter-wjs");
+    !function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, "script", "twitter-wjs");
 
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36594124-1']);
-  _gaq.push(['_setDomainName', 'serverstatusapp.com']);
-  _gaq.push(['_setAllowLinker', true]);
-  _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36594124-1']);
+    _gaq.push(['_setDomainName', 'serverstatusapp.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
 </script>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="bootstrap-3.0.0/assets/js/jquery.js"></script>
-<script src="bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/tools.js"></script>
 </body>
 </html>
