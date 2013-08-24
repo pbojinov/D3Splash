@@ -67,5 +67,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     // Default task(s).
-    grunt.registerTask('dev', 'jshint concat uglify cssmin');
+    grunt.registerTask('dev', ['jshint', 'concat', 'uglify', 'cssmin']);
 };
