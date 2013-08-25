@@ -60,17 +60,6 @@ module.exports = function (grunt) {
                 dest: 'dist/css/d3splash-v<%= pkg.version %>.min.css'
             }
         },
-        htmlmin: {
-            dist: {
-                options: {
-                    removeComments: true,
-                    collapseWhitespace: true
-                },
-                files: {
-                    'dist/index.html': 'app/index.html'
-                }
-            }
-        },
         copy: {
             main: {
                 src: ['app/*.html', 'app/favicon.ico'],
@@ -89,6 +78,20 @@ module.exports = function (grunt) {
                     buildNumber: 'd3splash-v<%= pkg.version %>'
                 }
             }
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    //destination:source
+                    'dist/index.html': 'dist/index.html',
+                    'dist/privacy.html': 'dist/privacy.html',
+                    'dist/releases.html': 'dist/releases.html'
+                }
+            }
         }
     });
 
@@ -97,12 +100,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-htmlrefs');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     // Default task(s).
-    grunt.registerTask('dev', ['jshint', 'concat', 'uglify', 'cssmin', 'copy', 'htmlrefs']);
+    grunt.registerTask('dev', ['jshint', 'concat', 'uglify', 'cssmin', 'copy', 'htmlrefs', 'htmlmin']);
 
     // Default task.
     //grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'copy', 'usemin']);

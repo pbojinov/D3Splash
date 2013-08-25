@@ -79,3 +79,7 @@ li.social-media {
 .container .credit {
     margin: 20px 0;
 }
+
+.hero-download img:hover {
+    opacity: 0.7;
+}

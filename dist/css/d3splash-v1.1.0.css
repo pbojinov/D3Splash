@@ -87,7 +87,10 @@ li.social-media {
 .container .credit {
     margin: 20px 0;
 }
- /* Magnific Popup CSS */
+
+.hero-download img:hover {
+    opacity: 0.7;
+} /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
   left: 0;
@@ -807,7 +810,7 @@ img.mfp-img {
 		opacity: 0;
 		-o-transform: translateY(2000px);
 	}
-	
+
 	100% {
 		opacity: 1;
 		-o-transform: translateY(0);
