@@ -9,14 +9,8 @@
 
     <title>Diablo 3 Server Status</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/navbar-fixed-top.css" rel="stylesheet">
-    <link href="css/magnific-popup.css" rel="stylesheet"/>
-    <link href="css/animate-custom.css" rel="stylesheet"/>
-
+    <!-- MIN CSS -->
+    <link href="../css/d3splash-v1.1.0.min.css" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -49,7 +43,6 @@
         <!--/.nav-collapse -->
     </div>
 </div>
-
 <div id="wrap">
     <div class="container">
 
@@ -57,31 +50,47 @@
     ================================================== -->
         <section id="docs">
             <div class="page-header">
-                <h1 class="animated fadeInDown">Privacy Policy</h1>
+                <h1 class="animated fadeInDown">Releases</h1>
             </div>
-
             <div class="notes animated fadeInLeft">
                 <dl>
-                    <dt>OVERVIEW</dt>
-                    <p>Diablo 3 Server Status does not sell, give, or trade the statistics we store to any 3rd parties
-                        for data-mining or marketing purposes.
-                        We use 3rd party services to improve the performance of our app. Specifically <a
-                                href="http://www.google.com/analytics/learn/privacy.html">Google Analytics</a> and <a
-                                href="http://www.crittercism.com/about.html">Crittercism</a>.
-                        The data we collect pertains strictly to the applications performance and application use.
-                        Therefore it does not contain any sensitive information such as user IP or user related data.
-                    </p>
+                    <dt>1.3</dt>
+                    <ul>
+                        <li>Added task bar</li>
+                        <li>UI Improvements</li>
+                        <li>Bug fixes</li>
+                    </ul>
                 </dl>
                 <dl>
-                    <dt>BILZZARD COPYRIGHT NOTICE</dt>
-                    <p>Diablo and Blizzard Entertainment are trademarks or registered trademarks of Blizzard
-                        Entertainment, Inc. in the U.S. and/or other countries. <br/> ©2012 Blizzard Entertainment, Inc.
-                        All rights reserved. </p>
+                    <dt>1.2</dt>
+                    <ul>
+                        <li>Back button now closes app</li>
+                        <li>Bug fixes</li>
+                    </ul>
                 </dl>
+
                 <dl>
-                    <dt>CONTACT US</dt>
-                    <p>If you have any questions or suggestions regarding this Privacy Policy, please contact
-                        petarbojinov@gmail.com</p>
+                    <dt>1.1</dt>
+                    <ul>
+                        <li>Whole app redesign, optimized</li>
+                        <li>Native release</li>
+                    </ul>
+                </dl>
+
+                <dl>
+                    <dt>0.2</dt>
+                    <ul>
+                        <li>Added auction house</li>
+                        <li>Moved to Google App Engine due to high traffic</li>
+                    </ul>
+                </dl>
+
+                <dl>
+                    <dt>0.1</dt>
+                    <ul>
+                        <li>Initial release</li>
+                        <li>jQuery mobile app</li>
+                    </ul>
                 </dl>
             </div>
         </section>
@@ -90,12 +99,12 @@
         <footer class="animated fadeInUp">
             <hr>
             <ul class="footer-links">
-                <li class="active">
+                <li>
                     <a href="privacy.html"
-                       onclick="_gaq.push(['_trackEvent', 'privacy', 'clicked', 'privacy', 'footer'])">Privacy Policy</a>
+                       onclick="_gaq.push(['_trackEvent', 'privacy', 'clicked', 'releases', 'footer'])">Privacy Policy</a>
                 </li>
                 <li class="muted">·</li>
-                <li><a href="releases.html">Releases</a></li>
+                <li class="active"><a href="releases.html">Releases</a></li>
                 <li class="muted">·</li>
                 <li class="social-media">
                     <iframe src="http://ghbtns.com/github-btn.html?user=pbojinov&type=follow"
@@ -103,7 +112,7 @@
                 </li>
                 <li class="social-media">
                     <a href="https://twitter.com/pbojinov"
-                       onclick="_gaq.push(['_trackEvent', 'twitter follow', 'clicked', 'privacy', 'footer'])"
+                       onclick="_gaq.push(['_trackEvent', 'twitter follow', 'clicked', 'releases', 'footer'])"
                        class="twitter-follow-button"
                        data-show-count="false"
                        data-dnt="true">Follow @pbojinov</a>
@@ -111,7 +120,7 @@
 
                 <li class="social-media">
                     <a href="https://twitter.com/share"
-                       onclick="_gaq.push(['_trackEvent', 'twitter share', 'clicked', 'privacy', 'nav'])"
+                       onclick="_gaq.push(['_trackEvent', 'twitter share', 'clicked', 'releases', 'nav'])"
                        class="twitter-share-button" data-url="http://bit.ly/diablo3ss"
                        data-text="Check out the Diablo 3 Server Status app on Google Play!" data-via="pbojinov"
                        data-hashtags="d3ss" data-dnt="true">Tweet</a>
@@ -127,6 +136,7 @@
     <!-- /container -->
 </div>
 <!-- /wrap -->
+
 
 <script type="text/javascript">
     !function (d, s, id) {
@@ -156,10 +166,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/magnific-popup.js"></script>
-<script src="js/tools.js"></script>
+<script src="../js/d3splash-v1.1.0.min.js"></script>
 </body>
 </html>
 
