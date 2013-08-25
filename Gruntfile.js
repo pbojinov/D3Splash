@@ -73,18 +73,22 @@ module.exports = function (grunt) {
         },
         copy: {
             main: {
-                src: 'app/*.html',
+                src: ['app/*.html', 'app/favicon.ico'],
                 dest: 'dist/',
                 flatten: true,
                 expand: true,
                 filter: 'isFile'
             }
         },
-        useminPrepare: {
-            html: ['dist/index.html']
-        },
-        usemin: {
-            html: ['dist/index.html']
+        htmlrefs: {
+            dist: {
+                src: 'dist/*.html',
+                dest: 'dist/',
+                /** any other parameter included on the options will be passed for template evaluation */
+                options: {
+                    buildNumber: 'd3splash-v<%= pkg.version %>'
+                }
+            }
         }
     });
 
@@ -95,11 +99,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-usemin');
+    grunt.loadNpmTasks('grunt-htmlrefs');
 
     // Default task(s).
-    grunt.registerTask('dev', ['jshint', 'concat', 'uglify', 'cssmin']);
+    grunt.registerTask('dev', ['jshint', 'concat', 'uglify', 'cssmin', 'copy', 'htmlrefs']);
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'copy', 'usemin']);
+    //grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'copy', 'usemin']);
 };
