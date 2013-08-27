@@ -23,7 +23,7 @@ module.exports = function (grunt) {
                     jquery: true
                 }
             },
-            all: ['app/js/recipe.js', 'app/js/recipe.clean.js'] //'Apps/LifeAlly/js/update-<%= pkg.version %>.min.js'
+            all: ['app/js/tools.js', 'dist/js/d3splash-v<%= pkg.version %>.js']
         },
         concat: {
             js: {
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
             }
         },
         cssmin: {
-            css:{
+            css: {
                 src: 'dist/css/d3splash-v<%= pkg.version %>.css',
                 dest: 'dist/css/d3splash-v<%= pkg.version %>.min.css'
             }
@@ -67,6 +67,22 @@ module.exports = function (grunt) {
                 flatten: true,
                 expand: true,
                 filter: 'isFile'
+            }
+        },
+        imagemin: {
+            png: {
+                options: {
+                    optimizationLevel: 7
+                },
+                files: [
+                    {
+                        expand: true,        // Enable dynamic expansion.
+                        cwd: 'app/img',     // Src matches are relative to this path.
+                        src: '{,*/}*.{png,jpg,jpeg}',     // Actual pattern(s) to match.
+                        dest: 'dist/img'  // Destination path prefix.
+
+                    }
+                ]
             }
         },
         htmlrefs: {
@@ -101,12 +117,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-htmlrefs');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     // Default task(s).
-    grunt.registerTask('dev', ['jshint', 'concat', 'uglify', 'cssmin', 'copy', 'htmlrefs', 'htmlmin']);
+    grunt.registerTask('dev', ['jshint', 'concat', 'uglify', 'cssmin', 'copy', 'imagemin', 'htmlrefs', 'htmlmin', 'jshint']);
+    grunt.registerTask('img', ['imagemin']);
 
-    // Default task.
-    //grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'copy', 'usemin']);
 };
